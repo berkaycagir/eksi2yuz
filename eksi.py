@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import requests, tweepy, logging, json, pickle
 from bs4 import BeautifulSoup
+from user_agent import generate_user_agent
 
 consumer_key = ""
 consumer_secret = ""
@@ -11,7 +12,7 @@ access_token_secret = ""
 logging.basicConfig(filename = 'eksi.log', level = logging.INFO, format = '%(asctime)s %(message)s')
 
 def get_data(page):
-    r = requests.get("https://eksisozluk.com/basliklar/gundem?p=" + page, headers = {"X-Requested-With": "XMLHttpRequest", "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) Gecko/20100101 Firefox/61.0"})
+    r = requests.get("https://eksisozluk.com/basliklar/gundem?p=" + page, headers = {"X-Requested-With": "XMLHttpRequest", "User-Agent": generate_user_agent()})
     soup = BeautifulSoup(r.text)
 
     data = '{"current_page": "' + page + '",'

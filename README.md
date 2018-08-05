@@ -4,8 +4,8 @@
 
 ## Dependencies
 
-* a recent version of Python 2 with [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/), [requests](https://github.com/requests/requests), [tweepy](https://github.com/tweepy/tweepy)
-* a Twitter account (__obviously__)
+* a recent version of Python 2 with [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/), [requests](https://github.com/requests/requests), [tweepy](https://github.com/tweepy/tweepy), and [user_agent](https://github.com/lorien/user_agent)
+* a Twitter account (_obviously_)
 * a scheduled command daemon
 
 ## Installation
@@ -17,7 +17,7 @@
 
 ## Data persistence
 
-Python's [pickle](https://docs.python.org/2/library/pickle.html) module is being used for data persistence; and quite frankly I think that's enough for this.
+Python's [pickle](https://docs.python.org/2/library/pickle.html) module is being used for data persistence; and that's probably more than enough for this.
 
 ## Contribution
 
